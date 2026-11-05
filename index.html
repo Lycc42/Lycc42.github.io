@@ -40,10 +40,14 @@
     .artifact-badges { display:flex; align-items:center; gap:9px; margin-top:10px; }
     .artifact-badges a { display:inline-flex; border-radius:50%; }
     .artifact-badges img { display:block; width:48px; height:48px; object-fit:contain; }
-    /* Keep visitor geography unobtrusive once a site-specific widget is configured. */
-    .visitor-map { margin-top:24px; }
-    .visitor-map h2 { font-size:15px; margin-bottom:9px; }
-    .visitor-map img { display:block; width:260px; max-width:100%; height:auto; border:0; }
+    /* Responsive map, using the provider's auto-width JavaScript widget. */
+    .visitor-map { margin-top:28px; max-width:660px; }
+    .visitor-map h2 { font-size:16px; margin-bottom:12px; }
+    .visitor-map .map-widget { width:100%; max-width:660px; overflow:hidden; }
+    .visitor-map .map-widget iframe,
+    .visitor-map .map-widget img,
+    .visitor-map .map-widget canvas { max-width:100%; }
+    .visitor-map noscript img { display:block; max-width:100%; height:auto; border:0; }
     .experience-item { margin-bottom:19px; }
     .experience-item:last-child { margin-bottom:0; }
     .experience-entry { display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin:0 0 4px; }
@@ -175,14 +179,19 @@
     <li><span>First-Class Master's Graduate Scholarship, Sun Yat-sen University</span><span class="year">2026, 2025</span></li>
     <li><span>Outstanding Graduate, Sun Yat-sen University</span><span class="year">2025</span></li>
     <li><span>Joyce M. Kuok Foundation Scholarship (Special Award), Sun Yat-sen University</span><span class="year">2024</span></li>
-    <li><span>Third Prize, National Finals of the National College Student Computer System Capability Competition (Operating System Design, OS Function Challenge Track)</span><span class="year">2024</span></li>
+    <li><span>Third Prize, National Finals, National Student Computer System Capability Challenge (NSCSCC), Operating System Design Contest (OS Function Challenge Track)</span><span class="year">2024</span></li>
    </ul>
   </section>
   <section id="visitors" class="visitor-map" aria-labelledby="visitors-heading">
    <h2 id="visitors-heading">Visitors</h2>
-   <a href="https://mapmyvisitors.com/web/1c9ba" title="Visitor map statistics" target="_blank" rel="noopener noreferrer">
-    <img src="https://mapmyvisitors.com/map.png?d=s_KVvAWDnEo5_-t_yB0jnV9wCamenmkY6BQRZM_fPfI&amp;cl=ffffff" alt="World map of visitor locations" width="260" decoding="async">
-   </a>
+   <div class="map-widget">
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=s_KVvAWDnEo5_-t_yB0jnV9wCamenmkY6BQRZM_fPfI&amp;cl=ffffff&amp;w=a"></script>
+    <noscript>
+     <a href="https://mapmyvisitors.com/web/1c9ba" title="Visitor map statistics" target="_blank" rel="noopener noreferrer">
+      <img src="https://mapmyvisitors.com/map.png?d=s_KVvAWDnEo5_-t_yB0jnV9wCamenmkY6BQRZM_fPfI&amp;cl=ffffff" alt="World map of visitor locations" width="600">
+     </a>
+    </noscript>
+   </div>
   </section>
   <footer>© 2026 Yang Liu · Powered by GitHub Pages</footer>
  </main>
