@@ -37,6 +37,13 @@
     .pub-authors { color:#4b5560; }
     .pub-venue { color:var(--muted); }
     .pub-links { display:flex; flex-wrap:wrap; gap:5px 14px; margin-top:3px; }
+    .artifact-badges { display:flex; align-items:center; gap:9px; margin-top:10px; }
+    .artifact-badges a { display:inline-flex; border-radius:50%; }
+    .artifact-badges img { display:block; width:48px; height:48px; object-fit:contain; }
+    /* Keep visitor geography unobtrusive once a site-specific widget is configured. */
+    .visitor-map { margin-top:24px; }
+    .visitor-map h2 { font-size:15px; margin-bottom:9px; }
+    .visitor-map img { display:block; width:260px; max-width:100%; height:auto; border:0; }
     .experience-item { margin-bottom:19px; }
     .experience-item:last-child { margin-bottom:0; }
     .experience-entry { display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin:0 0 4px; }
@@ -97,17 +104,21 @@
    <article class="pub">
     <div class="pub-title">LogNexus: Effective Log Compression via Unified Redundancy Encoding</div>
     <div class="pub-authors"><strong>Yang Liu</strong>, Kaiming Zhang, Zhuangbin Chen, Zibin Zheng</div>
-    <div class="pub-venue">ISSTA 2026 · Research Track</div>
+    <div class="pub-venue">ISSTA 2026 · CCF-A</div>
     <div class="pub-links">
      <a href="https://doi.org/10.1145/3832263" target="_blank" rel="noopener noreferrer">Paper</a>
      <a href="https://arxiv.org/abs/2601.17482" target="_blank" rel="noopener noreferrer">Early preprint (LogPrism)</a>
      <a href="https://github.com/OpsPAI/LogNexus" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
+    <div class="artifact-badges" aria-label="ACM Artifact Review and Badging awards">
+     <a href="https://doi.org/10.5281/zenodo.21281836" target="_blank" rel="noopener noreferrer" title="ACM Artifacts Available v1.1"><img src="assets/artifacts-available.png" width="48" height="48" alt="ACM Artifacts Available v1.1" loading="lazy"></a>
+     <a href="https://doi.org/10.1145/3832263" target="_blank" rel="noopener noreferrer" title="ACM Artifacts Evaluated – Reusable v1.1"><img src="assets/artifacts-reusable.png" width="48" height="48" alt="ACM Artifacts Evaluated – Reusable v1.1" loading="lazy"></a>
+    </div>
    </article>
    <article class="pub">
     <div class="pub-title">Panorama: Unveiling Latent Dependencies for Microservice Autoscaling via Meta-learning</div>
     <div class="pub-authors">Zhuangbin Chen, Hongjiang Feng, <strong>Yang Liu</strong>, Juzheng Zheng, Xiaoyu He, Zibin Zheng</div>
-    <div class="pub-venue">ASE 2026 · Research Track</div>
+    <div class="pub-venue">ASE 2026 · CCF-A</div>
     <div class="pub-links">
      <a href="https://doi.org/10.1145/3832783.3837485" target="_blank" rel="noopener noreferrer">Paper</a>
      <a href="https://github.com/OpsPAI/Panorama" target="_blank" rel="noopener noreferrer">Code</a>
@@ -116,7 +127,7 @@
    <article class="pub">
     <div class="pub-title">CAST: Automated Resilience Testing for Production Cloud Service Systems</div>
     <div class="pub-authors">Zhuangbin Chen, Zhiling Deng, Kaiming Zhang, <strong>Yang Liu</strong>, Cheng Cui, Jinfeng Zhong, Zibin Zheng</div>
-    <div class="pub-venue">ICSE 2026 · Software Engineering in Practice (SEIP)</div>
+    <div class="pub-venue">ICSE 2026 · CCF-A</div>
     <div class="pub-links">
      <a href="https://doi.org/10.1145/3786583.3786867" target="_blank" rel="noopener noreferrer">Paper</a>
      <a href="https://arxiv.org/abs/2602.00972" target="_blank" rel="noopener noreferrer">Preprint</a>
@@ -139,7 +150,7 @@
   </section>
 
   <section id="experience" aria-labelledby="experience-heading">
-   <h2 id="experience-heading">Research Experience</h2>
+   <h2 id="experience-heading">Internships</h2>
    <div class="experience-item">
     <p class="experience-entry"><span><strong>Research Intern</strong> · Huawei 2012 Labs, Shenzhen</span><span class="date">Jul 2026 – Present</span></p>
     <p class="experience-desc">Research on LLM training and inference infrastructure reliability, focusing on fault injection, failure detection, and recovery evaluation across GPU and Ascend NPU systems.</p>
@@ -151,7 +162,7 @@
   </section>
 
   <section id="teaching" aria-labelledby="teaching-heading">
-   <h2 id="teaching-heading">TA Experience</h2>
+   <h2 id="teaching-heading">Teaching Assistant Experience</h2>
    <p class="experience-entry teaching-entry"><span>Computer Graphics · Sun Yat-sen University</span><span class="date">2025–2026</span></p>
    <p class="experience-entry teaching-entry"><span>Software Engineering Practical Training (Intermediate) · Sun Yat-sen University</span><span class="date">2024–2025, 2025–2026</span></p>
    <p class="experience-entry teaching-entry"><span>Data Structures and Algorithms · Sun Yat-sen University</span><span class="date">2024–2025</span></p>
@@ -161,12 +172,17 @@
    <h2 id="honors-heading">Honors &amp; Awards</h2>
    <ul class="honors-list">
     <li><span>National Scholarship for Graduate Students</span><span class="year">2026</span></li>
-    <li><span>First-Class Master's Graduate Scholarship, Sun Yat-sen University</span><span class="year">2025, 2026</span></li>
+    <li><span>First-Class Master's Graduate Scholarship, Sun Yat-sen University</span><span class="year">2026, 2025</span></li>
     <li><span>Outstanding Graduate, Sun Yat-sen University</span><span class="year">2025</span></li>
     <li><span>Joyce M. Kuok Foundation Scholarship (Special Award), Sun Yat-sen University</span><span class="year">2024</span></li>
     <li><span>Third Prize, National Finals of the National College Student Computer System Capability Competition (Operating System Design, OS Function Challenge Track)</span><span class="year">2024</span></li>
    </ul>
   </section>
+  <!-- Visitor geography widget: not active yet. Get a site-specific code for
+       https://lycc42.github.io/ at https://mapmyvisitors.com/ and insert the
+       provider-generated linked map image here as a small footer element.
+       Do not use a demonstration map or someone else's widget key.
+       A visitor map causes third-party requests and IP-based geolocation. -->
   <footer>© 2026 Yang Liu · Powered by GitHub Pages</footer>
  </main>
 </body>
